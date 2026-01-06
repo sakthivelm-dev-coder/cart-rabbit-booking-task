@@ -1,0 +1,22 @@
+/* frontend/src/styles.css */
+:root { --primary:#4f46e5; --secondary:#6b7280; --error:#dc2626; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; background:#f9fafb; }
+.container { max-width: 720px; margin: 0 auto; padding: 20px; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.field { margin-bottom: 12px; }
+.label { display:block; font-size:0.9rem; margin-bottom:6px; color:#374151; }
+.input { width:100%; padding:10px; border:1px solid #d1d5db; border-radius:8px; }
+.actions { margin: 10px 0 20px; }
+.primary, .secondary, .slot { padding:10px 14px; border-radius:8px; border:1px solid transparent; cursor:pointer; }
+.primary { background: var(--primary); color:#fff; }
+.secondary { background:#fff; color:#111; border-color:#d1d5db; }
+.card { background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:16px; margin-top:16px; }
+.error { color: var(--error); }
+.notice { margin-top:12px; padding:10px; background:#ecfeff; border:1px solid #a5f3fc; border-radius:8px; }
+.slots-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap:8px; margin: 16px 0; }
+.slot { background:#fff; border:1px solid #d1d5db; }
+.slot.open { color:#111; }
+.slot.blocked { color:#9ca3af; cursor: not-allowed; }
+.slot.selected { border-color: var(--primary); box-shadow: 0 0 0 2px rgba(79,70,229,.15); }
+@media (max-width:480px) { .slots-grid { grid-template-columns: repeat(2, 1fr); } }
